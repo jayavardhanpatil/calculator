@@ -21,8 +21,9 @@ public abstract class CalculatorFactory {
             return new Multipilcation();
         }else if(operation == DIVISION){
             return new Division();
+        }else {
+            throw new OperationNotSupportedException(operation + " Operation is not supported");
         }
-        return null;
     }
 
 }

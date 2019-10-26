@@ -7,8 +7,10 @@ public class Calculator extends CalculatorFactory{
 
     public Double calculate(double firstOperand, double secondOperand, char operation){
 
-        CalculateOperation calculateOperation = getCalculateMehod(operation);
-
-        return calculateOperation.calculateResult(firstOperand, secondOperand);
+            CalculateOperation calculateOperation = getCalculateMehod(operation);
+            if(calculateOperation != null) {
+                return calculateOperation.calculateResult(firstOperand, secondOperand);
+            }
+            throw new OperationNotSupportedException("Operation not supported");
     }
 }
