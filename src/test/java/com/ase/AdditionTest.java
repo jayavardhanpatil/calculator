@@ -8,34 +8,37 @@ import org.junit.Test;
  */
 public class AdditionTest {
 
-    private Addition addition = new Addition();
-
     //Positive test Cases
     @Test
     public void testAddPositiveNumbers(){
+        Addition addition = new Addition();
         double first = 10, second = 20;
         Double expectedValue = (first + second);
-        Assert.assertEquals("Addition ", expectedValue, addition.calculateResult(first, second));
+        Assert.assertEquals("Addition Positive Numbers", expectedValue, addition.calculateResult(first, second));
     }
 
     @Test
     public void testAddNegativeNumbers(){
+        Addition addition = new Addition();
         double first = -5.0, second = -20;
         Double expectedValue = (first + second);
-        Assert.assertEquals("Addition ", expectedValue, addition.calculateResult(first, second));
+        Assert.assertEquals("Addition Negative Numbers", expectedValue, addition.calculateResult(first, second));
     }
 
     @Test
     public void testAddPositiveAndNegativeNumbers(){
+        Addition addition = new Addition();
         double first = -10, second = 20.0;
         Double expectedValue = (first + second);
-        Assert.assertEquals("Addition ", expectedValue, addition.calculateResult(first, second));
+        Assert.assertEquals("Addition Positive and Negative Numbers", expectedValue, addition.calculateResult(first, second));
     }
 
     @Test
     public void testAddZeroNumbers(){
+        Addition addition = new Addition();
         double first = 0, second = 0;
         Double expectedValue = (first + second);
-        Assert.assertEquals("Addition ", expectedValue, addition.calculateResult(first, second));
+        Assert.assertEquals("Addition two Zeros", expectedValue, addition.calculateResult(first, second));
     }
+
 }

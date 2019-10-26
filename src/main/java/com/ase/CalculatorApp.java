@@ -6,7 +6,11 @@ package com.ase;
 public class CalculatorApp {
 
     public static void main(String[] args) {
-        System.out.println("test CI CD Demo");
+        System.out.println("Calculator CI CD Demo");
+
     }
+
+
+
 
 }
