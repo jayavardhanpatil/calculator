@@ -55,7 +55,7 @@ public class DivisionTest {
         //Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
     }
 
-    @Test
+    @Test(expected = ArithmeticException.class)
     public void testDividZeroByZeroisNotAllowed(){
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
