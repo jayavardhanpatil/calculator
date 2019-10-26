@@ -10,14 +10,14 @@ public class UnSupportedOperationTest {
     final char POWER_OPERATION = '^';
     final char MODULO = '%';
 
-    @Test()
+    @Test(expected = OperationNotSupportedException.class)
     public void powerOerationIsNotSupported(){
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
         Double result = calculator.calculate(first, second, POWER_OPERATION);
     }
 
-    @Test()
+    @Test(expected = OperationNotSupportedException.class)
     public void moduloOerationIsNotSupported(){
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
