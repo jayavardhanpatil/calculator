@@ -6,9 +6,11 @@ package com.ase;
 public class Division implements CalculateOperation {
     @Override
     public Double calculateResult(double firstOperand, double secondOperand) {
+
         if(secondOperand == 0){
             throw new ArithmeticException("devide by zero operation is not supported");
         }
+
         return firstOperand / secondOperand;
     }
 }

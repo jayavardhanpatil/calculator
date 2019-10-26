@@ -60,7 +60,7 @@ public class DivisionTest {
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
         Double result = calculator.calculate(first, second, DIVISION);
-        Double expectedValue = (first / second);
+        //Double expectedValue = (first / second);
         //Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
     }
 
