@@ -19,10 +19,8 @@ public abstract class CalculatorFactory {
             return new Subtraction();
         }else if(operation == MULTIPLICATION){
             return new Multipilcation();
-        /*}else if(operation == DIVISION){
+        }else if(operation == DIVISION){
             return new Division();
-
-        */
         }
         return null;
     }
