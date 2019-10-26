@@ -7,7 +7,7 @@ package com.ase;
 public abstract class CalculatorFactory {
 
     private final char ADDITION = '+';
-    private final char SUBSTRACTION = '-';
+    private final char SUBTRACTION = '-';
     private final char MULTIPLICATION = '*';
     private final char DIVISION = '/';
 
@@ -15,9 +15,9 @@ public abstract class CalculatorFactory {
 
         if(operation == ADDITION){
             return new Addition();
-       /* }else if(operation == SUBSTRACTION){
-            return new Substraction();
-        }else if(operation == MULTIPLICATION){
+        }else if(operation == SUBTRACTION){
+            return new Subtraction();
+        /*}else if(operation == MULTIPLICATION){
             return new Multipilcation();
         }else if(operation == DIVISION){
             return new Division();

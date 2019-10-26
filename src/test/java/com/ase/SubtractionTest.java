@@ -11,8 +11,8 @@ public class SubtractionTest {
     final char SUBTRACTION = '-';
 
     //Positive test Cases
-    @Test(expected=NullPointerException.class)
-    public void testAddPositiveNumbers(){
+    @Test()
+    public void testSubtractPositiveNumbers(){
         Calculator calculator = new Calculator();
         double first = 10, second = 20;
         Double expectedValue = (first - second);
@@ -20,7 +20,7 @@ public class SubtractionTest {
     }
 
     @Test
-    public void testAddNegativeNumbers(){
+    public void testSubtractNegativeNumbers(){
         Calculator calculator = new Calculator();
         double first = -5.0, second = -20;
         Double expectedValue = (first - second);
@@ -28,7 +28,7 @@ public class SubtractionTest {
     }
 
     @Test
-    public void testAddPositiveAndNegativeNumbers(){
+    public void testSubtractPositiveAndNegativeNumbers(){
         Calculator calculator = new Calculator();
         double first = -10, second = 20.0;
         Double expectedValue = (first - second);
@@ -36,11 +36,10 @@ public class SubtractionTest {
     }
 
     @Test
-    public void testAddZeroNumbers(){
+    public void testSubtractZeroNumbers(){
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
         Double expectedValue = (first - second);
         Assert.assertEquals("Substraction two Zeros", expectedValue, calculator.calculate(first, second, SUBTRACTION));
     }
-
 }
