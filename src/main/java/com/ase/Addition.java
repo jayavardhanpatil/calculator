@@ -6,6 +6,6 @@ package com.ase;
 public class Addition implements CalculateOperation {
 
     public Double calculateResult(double firstOperand, double secondOperand) {
-        return (firstOperand + secondOperand);
+        return firstOperand + secondOperand;
     }
 }

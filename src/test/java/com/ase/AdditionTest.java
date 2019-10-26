@@ -12,8 +12,29 @@ public class AdditionTest {
 
     //Positive test Cases
     @Test
-    public void testPositiveNumbers(){
+    public void testAddPositiveNumbers(){
         double first = 10, second = 20;
+        Double expectedValue = (first + second);
+        Assert.assertEquals("Addition ", expectedValue, addition.calculateResult(first, second));
+    }
+
+    @Test
+    public void testAddNegativeNumbers(){
+        double first = -5.0, second = -20;
+        Double expectedValue = (first + second);
+        Assert.assertEquals("Addition ", expectedValue, addition.calculateResult(first, second));
+    }
+
+    @Test
+    public void testAddPositiveAndNegativeNumbers(){
+        double first = -10, second = 20.0;
+        Double expectedValue = (first + second);
+        Assert.assertEquals("Addition ", expectedValue, addition.calculateResult(first, second));
+    }
+
+    @Test
+    public void testAddZeroNumbers(){
+        double first = 0, second = 0;
         Double expectedValue = (first + second);
         Assert.assertEquals("Addition ", expectedValue, addition.calculateResult(first, second));
     }
