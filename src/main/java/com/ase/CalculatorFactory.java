@@ -10,6 +10,7 @@ public abstract class CalculatorFactory {
     private final char SUBTRACTION = '-';
     private final char MULTIPLICATION = '*';
     private final char DIVISION = '/';
+    private final char MODULO = '%';
 
     public CalculateOperation getCalculateMehod(char operation){
 
@@ -21,7 +22,9 @@ public abstract class CalculatorFactory {
             return new Multipilcation();
         }else if(operation == DIVISION){
             return new Division();
-        }else {
+        }else if(operation == MODULO){
+            return new Modulus();
+        }else{
             throw new OperationNotSupportedException(operation + " Operation is not supported");
         }
     }

@@ -8,7 +8,7 @@ import org.junit.Test;
 public class UnSupportedOperationTest {
 
     final char POWER_OPERATION = '^';
-    final char MODULO = '%';
+    //final char MODULO = '%';
 
     @Test(expected = OperationNotSupportedException.class)
     public void powerOerationIsNotSupported(){
@@ -17,10 +17,10 @@ public class UnSupportedOperationTest {
         Double result = calculator.calculate(first, second, POWER_OPERATION);
     }
 
-    @Test(expected = OperationNotSupportedException.class)
+    /*@Test(expected = OperationNotSupportedException.class)
     public void moduloOerationIsNotSupported(){
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
         Double result = calculator.calculate(first, second, MODULO);
-    }
+    }*/
 }

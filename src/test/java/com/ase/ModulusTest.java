@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * Created by jayavardhanpatil on 10/26/19
  */
-public class ModuloTest {
+public class ModulusTest {
 
     final char MODULO = '%';
 
@@ -36,10 +36,30 @@ public class ModuloTest {
     }
 
     @Test
-    public void testModuloOfZeroNumbers(){
+    public void testModulusOdZeroByNumber(){
+        Calculator calculator = new Calculator();
+        double first = 0, second = 20;
+        Double result = calculator.calculate(first, second, MODULO);
+        Double expectedValue = (first / second);
+        Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
+    }
+
+    //Negative Test Cases
+    @Test(expected = ArithmeticException.class)
+    public void testModulusOfNumberbyZeroisNotAllowed(){
+        Calculator calculator = new Calculator();
+        double first = 10, second = 0;
+        Double result = calculator.calculate(first, second, MODULO);
+        //Double expectedValue = (first / second);
+        //Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void testModulusOfZeroByZeroisNotAllowed(){
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
-        Double expectedValue = (first % second);
-        Assert.assertEquals("Modulo of two Zeros", expectedValue, calculator.calculate(first, second, MODULO));
+        Double result = calculator.calculate(first, second, MODULO);
+        //Double expectedValue = (first / second);
+        //Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
     }
 }
