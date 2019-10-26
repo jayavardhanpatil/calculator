@@ -6,17 +6,17 @@ import org.junit.Test;
 /**
  * Created by jayavardhanpatil on 10/26/19
  */
-public class SubstractionTest {
+public class SubtractionTest {
 
-    final char SUBSTRACTION = '-';
+    final char SUBTRACTION = '-';
 
     //Positive test Cases
-    @Test
+    @Test(expected=NullPointerException.class)
     public void testAddPositiveNumbers(){
         Calculator calculator = new Calculator();
         double first = 10, second = 20;
         Double expectedValue = (first - second);
-        Assert.assertEquals("Substraction Positive Numbers", expectedValue, calculator.calculate(first, second, SUBSTRACTION));
+        Assert.assertEquals("Substraction Positive Numbers", expectedValue, calculator.calculate(first, second, SUBTRACTION));
     }
 
     @Test
@@ -24,7 +24,7 @@ public class SubstractionTest {
         Calculator calculator = new Calculator();
         double first = -5.0, second = -20;
         Double expectedValue = (first - second);
-        Assert.assertEquals("Substraction Negative Numbers", expectedValue, calculator.calculate(first, second, SUBSTRACTION));
+        Assert.assertEquals("Substraction Negative Numbers", expectedValue, calculator.calculate(first, second, SUBTRACTION));
     }
 
     @Test
@@ -32,7 +32,7 @@ public class SubstractionTest {
         Calculator calculator = new Calculator();
         double first = -10, second = 20.0;
         Double expectedValue = (first - second);
-        Assert.assertEquals("Substraction Positive and Negative Numbers", expectedValue, calculator.calculate(first, second, SUBSTRACTION));
+        Assert.assertEquals("Substraction Positive and Negative Numbers", expectedValue, calculator.calculate(first, second, SUBTRACTION));
     }
 
     @Test
@@ -40,7 +40,7 @@ public class SubstractionTest {
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
         Double expectedValue = (first - second);
-        Assert.assertEquals("Substraction two Zeros", expectedValue, calculator.calculate(first, second, SUBSTRACTION));
+        Assert.assertEquals("Substraction two Zeros", expectedValue, calculator.calculate(first, second, SUBTRACTION));
     }
 
 }
