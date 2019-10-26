@@ -7,4 +7,5 @@ package com.ase;
 public interface CalculateOperation {
 
     Double calculateResult(double firstOperand, double secondOperand);
+
 }

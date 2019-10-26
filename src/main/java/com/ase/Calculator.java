@@ -3,7 +3,12 @@ package com.ase;
 /**
  * Created by jayavardhanpatil on 10/25/19
  */
-public class Calculate {
+public class Calculator extends CalculatorFactory{
 
-    
+    public Double calculate(double firstOperand, double secondOperand, char operation){
+
+        CalculateOperation calculateOperation = getCalculateMehod(operation);
+
+        return calculateOperation.calculateResult(firstOperand, secondOperand);
+    }
 }

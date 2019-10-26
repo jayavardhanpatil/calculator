@@ -15,14 +15,15 @@ public abstract class CalculatorFactory {
 
         if(operation == ADDITION){
             return new Addition();
-        }else if(operation == SUBSTRACTION){
+       /* }else if(operation == SUBSTRACTION){
             return new Substraction();
         }else if(operation == MULTIPLICATION){
             return new Multipilcation();
         }else if(operation == DIVISION){
             return new Division();
-        }
 
+        */
+        }
         return null;
     }
 
