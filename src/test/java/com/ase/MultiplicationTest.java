@@ -48,7 +48,7 @@ public class MultiplicationTest {
         Calculator calculator = new Calculator();
         TestUtilities utilities = new TestUtilities();
         double[] elements = {1, 3, 5, 7, 8, 3, 10};
-        Double expectedResult = utilities.getSumOfArrayElements(elements);
+        Double expectedResult = utilities.getProductOfArrayElements(elements);
         Double result = calculator.calculate(elements, MULTIPLICATION);
         Assert.assertEquals("Sum of Array elements ", expectedResult, result);
     }
