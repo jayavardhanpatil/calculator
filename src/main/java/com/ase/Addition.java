@@ -9,4 +9,12 @@ public class Addition implements CalculateOperation {
         return firstOperand + secondOperand;
     }
 
+    @Override
+    public Double calculateResult(double[] arrayElement) {
+        double result = 0;
+        for(double element : arrayElement){
+            result += element;
+        }
+        return null;
+    }
 }

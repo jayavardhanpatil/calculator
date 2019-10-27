@@ -8,4 +8,8 @@ public interface CalculateOperation {
 
     Double calculateResult(double firstOperand, double secondOperand);
 
+    default Double calculateResult(double[] arrayElement){
+        throw new OperationNotSupportedException("Operation on Array of elements is not allowed");
+    };
+
 }
