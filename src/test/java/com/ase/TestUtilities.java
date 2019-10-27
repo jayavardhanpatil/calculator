@@ -14,7 +14,7 @@ public class TestUtilities {
     }
 
     public Double getProductOfArrayElements(double[] elements){
-        double result = 0;
+        double result = 1;
         for (double element : elements) {
             result *= element;
         }

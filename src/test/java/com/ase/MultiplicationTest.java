@@ -44,7 +44,7 @@ public class MultiplicationTest {
     }
 
     @Test
-    public void testAddArrayOfElements(){
+    public void testMultiplicationOfArrayElements(){
         Calculator calculator = new Calculator();
         TestUtilities utilities = new TestUtilities();
         double[] elements = {1, 3, 5, 7, 8, 3, 10};
