@@ -15,6 +15,6 @@ public class Addition implements CalculateOperation {
         for(double element : arrayElement){
             result += element;
         }
-        return null;
+        return result;
     }
 }
