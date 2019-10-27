@@ -8,7 +8,7 @@ public class TestUtilities {
     public Double getSumOfArrayElements(double[] elements){
         double result = 0;
         for (double element : elements) {
-            result += result;
+            result += element;
         }
         return result;
     }
