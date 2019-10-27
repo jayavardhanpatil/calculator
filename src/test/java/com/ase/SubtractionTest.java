@@ -42,4 +42,11 @@ public class SubtractionTest {
         Double expectedValue = (first - second);
         Assert.assertEquals("Substraction two Zeros", expectedValue, calculator.calculate(first, second, SUBTRACTION));
     }
+
+    @Test(expected = OperationNotSupportedException.class)
+    public void testDivisionOfArrayElementsIsNOtSupported(){
+        Calculator calculator = new Calculator();
+        double[] elements = {1, 3, 5, 7, 8, 3, 10};
+        Double result = calculator.calculate(elements, SUBTRACTION);
+    }
 }

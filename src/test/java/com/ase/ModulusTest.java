@@ -62,4 +62,11 @@ public class ModulusTest {
         //Double expectedValue = (first / second);
         //Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
     }
+
+    @Test(expected = OperationNotSupportedException.class)
+    public void testModulusOfArrayElementsIsNOtSupported(){
+        Calculator calculator = new Calculator();
+        double[] elements = {1, 3, 5, 7, 8, 3, 10};
+        Double result = calculator.calculate(elements, MODULO);
+    }
 }

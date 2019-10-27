@@ -60,8 +60,13 @@ public class DivisionTest {
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
         Double result = calculator.calculate(first, second, DIVISION);
-        //Double expectedValue = (first / second);
-        //Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
+    }
+
+    @Test(expected = OperationNotSupportedException.class)
+    public void testDivisionOfArrayElementsIsNOtSupported(){
+        Calculator calculator = new Calculator();
+        double[] elements = {1, 3, 5, 7, 8, 3, 10};
+        Double result = calculator.calculate(elements, DIVISION);
     }
 
 }

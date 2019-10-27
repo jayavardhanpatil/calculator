@@ -10,4 +10,12 @@ public class Multipilcation implements CalculateOperation {
         return firstOperand * secondOperand;
     }
 
+    public Double calculateResult(double[] elements) {
+        double result = 1;
+        for (double element: elements) {
+            result *= element;
+        }
+        return result;
+    }
+
 }

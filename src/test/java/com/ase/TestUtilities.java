@@ -12,4 +12,12 @@ public class TestUtilities {
         }
         return result;
     }
+
+    public Double getProductOfArrayElements(double[] elements){
+        double result = 0;
+        for (double element : elements) {
+            result *= element;
+        }
+        return result;
+    }
 }
