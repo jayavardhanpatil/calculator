@@ -58,7 +58,7 @@ public class DivisionTest {
     public void testDivideIntegerNumbers(){
         Calculator calculator = new Calculator();
         int first = 10, second = 20;
-        Double expectedValue = (double) (first + second);
+        Double expectedValue = (double) (first / second);
         Assert.assertEquals("Division of integer Numbers", expectedValue, calculator.calculate(first, second, DIVISION));
     }
 
