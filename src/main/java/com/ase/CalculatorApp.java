@@ -7,7 +7,9 @@ import java.util.Scanner;
 public class CalculatorApp {
 
     public static void main(String[] args) {
-        System.out.println("Enter first Number : ");
+
+        System.out.println("Demo Calculator App");
+        /*System.out.println("Enter first Number : ");
         Scanner scanner = new Scanner(System.in);
         double first = scanner.nextDouble();
 
@@ -18,6 +20,6 @@ public class CalculatorApp {
         char operation = scanner.next().charAt(0);
 
         Calculator calculator = new Calculator();
-        System.out.println(calculator.calculate(first, second, operation));
+        System.out.println(calculator.calculate(first, second, operation));*/
     }
 }
