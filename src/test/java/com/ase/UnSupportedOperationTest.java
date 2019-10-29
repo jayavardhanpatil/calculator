@@ -1,5 +1,6 @@
 package com.ase;
 
+import com.ase.exception.OperationNotSupportedException;
 import org.junit.Test;
 
 /**

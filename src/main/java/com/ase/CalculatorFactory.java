@@ -1,10 +1,12 @@
 package com.ase;
 
+import com.ase.exception.OperationNotSupportedException;
+
 /**
  * Created by jayavardhanpatil on 10/25/19
  */
 
-public abstract class CalculatorFactory {
+abstract class CalculatorFactory {
 
     private final char ADDITION = '+';
     private final char SUBTRACTION = '-';
@@ -12,7 +14,7 @@ public abstract class CalculatorFactory {
     private final char DIVISION = '/';
     private final char MODULO = '%';
 
-    public CalculateOperation getCalculateMehod(char operation){
+    CalculateOperation getCalculateMehod(char operation){
 
         if(operation == ADDITION){
             return new Addition();

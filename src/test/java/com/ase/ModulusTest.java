@@ -1,5 +1,6 @@
 package com.ase;
 
+import com.ase.exception.OperationNotSupportedException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,40 +9,40 @@ import org.junit.Test;
  */
 public class ModulusTest {
 
-    final char MODULO = '%';
+    final char MODULUS = '%';
 
     //Positive test Cases
     @Test
-    public void testModuloOfPositiveNumbers(){
+    public void testModulusOfPositiveNumbers(){
         Calculator calculator = new Calculator();
         double first = 10, second = 20;
         Double expectedValue = (first % second);
-        Assert.assertEquals("Modulo of Positive Numbers", expectedValue, calculator.calculate(first, second, MODULO));
+        Assert.assertEquals("Modulus of Positive Numbers", expectedValue, calculator.calculate(first, second, MODULUS));
     }
 
     @Test
-    public void testModuloOfNegativeNumbers(){
+    public void testModulusOfNegativeNumbers(){
         Calculator calculator = new Calculator();
         double first = -5.0, second = -20;
         Double expectedValue = (first % second);
-        Assert.assertEquals("Modulo Of Negative Numbers", expectedValue, calculator.calculate(first, second, MODULO));
+        Assert.assertEquals("Modulus Of Negative Numbers", expectedValue, calculator.calculate(first, second, MODULUS));
     }
 
     @Test
-    public void testModuloPositiveAndNegativeNumbers(){
+    public void testModulusPositiveAndNegativeNumbers(){
         Calculator calculator = new Calculator();
         double first = -10, second = 20.0;
         Double expectedValue = (first % second);
-        Assert.assertEquals("Modulo Positive and Negative Numbers", expectedValue, calculator.calculate(first, second, MODULO));
+        Assert.assertEquals("Modulus Positive and Negative Numbers", expectedValue, calculator.calculate(first, second, MODULUS));
     }
 
     @Test
     public void testModulusOdZeroByNumber(){
         Calculator calculator = new Calculator();
         double first = 0, second = 20;
-        Double result = calculator.calculate(first, second, MODULO);
+        Double result = calculator.calculate(first, second, MODULUS);
         Double expectedValue = (first / second);
-        Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
+        Assert.assertEquals("Modulus of Zero by Numbers", expectedValue, result);
     }
 
     //Negative Test Cases
@@ -49,7 +50,7 @@ public class ModulusTest {
     public void testModulusOfNumberbyZeroisNotAllowed(){
         Calculator calculator = new Calculator();
         double first = 10, second = 0;
-        Double result = calculator.calculate(first, second, MODULO);
+        Double result = calculator.calculate(first, second, MODULUS);
         //Double expectedValue = (first / second);
         //Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
     }
@@ -58,7 +59,7 @@ public class ModulusTest {
     public void testModulusOfZeroByZeroisNotAllowed(){
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
-        Double result = calculator.calculate(first, second, MODULO);
+        Double result = calculator.calculate(first, second, MODULUS);
         //Double expectedValue = (first / second);
         //Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
     }
@@ -67,6 +68,6 @@ public class ModulusTest {
     public void testModulusOfArrayElementsIsNOtSupported(){
         Calculator calculator = new Calculator();
         double[] elements = {1, 3, 5, 7, 8, 3, 10};
-        Double result = calculator.calculate(elements, MODULO);
+        Double result = calculator.calculate(elements, MODULUS);
     }
 }

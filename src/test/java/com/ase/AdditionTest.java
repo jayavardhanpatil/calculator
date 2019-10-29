@@ -1,5 +1,6 @@
 package com.ase;
 
+import com.ase.utilities.TestUtilities;
 import org.junit.Assert;
 import org.junit.Test;
 

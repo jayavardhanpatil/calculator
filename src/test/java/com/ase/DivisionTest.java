@@ -1,5 +1,6 @@
 package com.ase;
 
+import com.ase.exception.OperationNotSupportedException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -37,7 +38,7 @@ public class DivisionTest {
     }
 
     @Test
-    public void testDividZeroByNumber(){
+    public void testDivideZeroByNumber(){
         Calculator calculator = new Calculator();
         double first = 0, second = 20;
         Double result = calculator.calculate(first, second, DIVISION);
@@ -47,7 +48,7 @@ public class DivisionTest {
 
     //Negative Test Cases
     @Test(expected = ArithmeticException.class)
-    public void testDividNumberbyZeroisNotAllowed(){
+    public void testDivideNumberbyZeroisNotAllowed(){
         Calculator calculator = new Calculator();
         double first = 10, second = 0;
         Double result = calculator.calculate(first, second, DIVISION);
@@ -56,7 +57,7 @@ public class DivisionTest {
     }
 
     @Test(expected = ArithmeticException.class)
-    public void testDividZeroByZeroisNotAllowed(){
+    public void testDivideZeroByZeroisNotAllowed(){
         Calculator calculator = new Calculator();
         double first = 0, second = 0;
         Double result = calculator.calculate(first, second, DIVISION);

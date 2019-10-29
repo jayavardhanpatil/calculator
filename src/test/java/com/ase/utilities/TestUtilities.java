@@ -1,11 +1,11 @@
-package com.ase;
+package com.ase.utilities;
 
 /**
  * Created by jayavardhanpatil on 10/26/19
  */
 public class TestUtilities {
 
-    public Double getSumOfArrayElements(double[] elements){
+   public Double getSumOfArrayElements(double[] elements){
         double result = 0;
         for (double element : elements) {
             result += element;
@@ -13,7 +13,7 @@ public class TestUtilities {
         return result;
     }
 
-    public Double getProductOfArrayElements(double[] elements){
+   public Double getProductOfArrayElements(double[] elements){
         double result = 1;
         for (double element : elements) {
             result *= element;

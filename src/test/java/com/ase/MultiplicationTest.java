@@ -1,5 +1,6 @@
 package com.ase;
 
+import com.ase.utilities.TestUtilities;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -50,6 +51,6 @@ public class MultiplicationTest {
         double[] elements = {1, 3, 5, 7, 8, 3, 10};
         Double expectedResult = utilities.getProductOfArrayElements(elements);
         Double result = calculator.calculate(elements, MULTIPLICATION);
-        Assert.assertEquals("Sum of Array elements ", expectedResult, result);
+        Assert.assertEquals("Multiplication of Array elements ", expectedResult, result);
     }
 }

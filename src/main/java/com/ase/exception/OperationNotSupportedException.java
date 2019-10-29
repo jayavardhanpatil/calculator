@@ -1,4 +1,4 @@
-package com.ase;
+package com.ase.exception;
 
 /**
  * Created by jayavardhanpatil on 10/25/19
