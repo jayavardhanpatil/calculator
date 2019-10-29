@@ -77,5 +77,4 @@ public class AdditionTest {
         Double result = calculator.calculate(elements, ADDITION);
         Assert.assertEquals("Sum of Array elements ", expectedResult, result);
     }
-
 }
