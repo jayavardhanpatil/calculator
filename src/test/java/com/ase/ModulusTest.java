@@ -29,6 +29,31 @@ public class ModulusTest {
     }
 
     @Test
+    public void testModulusFlotNumbers(){
+        Calculator calculator = new Calculator();
+        float first = 10.0f, second = 20.0f;
+        Double expectedValue = (double)(first % second);
+        Assert.assertEquals("Modulus of Floating Numbers", expectedValue, calculator.calculate(first, second, MODULUS));
+    }
+
+    @Test
+    public void testModuludIntegerNumbers(){
+        Calculator calculator = new Calculator();
+        int first = 10, second = 20;
+        Double expectedValue = (double) (first % second);
+        Assert.assertEquals("Modulus of integer Numbers", expectedValue, calculator.calculate(first, second, MODULUS));
+    }
+
+    @Test
+    public void testModuludDifferentTypesOfNumbers(){
+        Calculator calculator = new Calculator();
+        int first = 10; double second = 20.0;
+        Double expectedValue = (double) (first % second);
+        Assert.assertEquals("Modulus of int and double Numbers", expectedValue, calculator.calculate(first, second, MODULUS));
+    }
+
+
+    @Test
     public void testModulusPositiveAndNegativeNumbers(){
         Calculator calculator = new Calculator();
         double first = -10, second = 20.0;

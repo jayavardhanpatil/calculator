@@ -44,6 +44,32 @@ public class MultiplicationTest {
         Assert.assertEquals("Multiplication two Zeros", expectedValue, calculator.calculate(first, second, MULTIPLICATION));
     }
 
+
+    @Test
+    public void testMultiplicatioFlotNumbers(){
+        Calculator calculator = new Calculator();
+        float first = 10.0f, second = 20.5f;
+        Double expectedValue = (double)(first * second);
+        Assert.assertEquals("Multiplication of Floating Numbers", expectedValue, calculator.calculate(first, second, MULTIPLICATION));
+    }
+
+    @Test
+    public void testMultiplicationIntegerNumbers(){
+        Calculator calculator = new Calculator();
+        int first = 10, second = 20;
+        Double expectedValue = (double) (first * second);
+        Assert.assertEquals("Multiplication of integer Numbers", expectedValue, calculator.calculate(first, second, MULTIPLICATION));
+    }
+
+    @Test
+    public void testMultiplicationDifferentTypesOfNumbers(){
+        Calculator calculator = new Calculator();
+        int first = 10; double second = 20.3;
+        Double expectedValue = (double) (first * second);
+
+        Assert.assertEquals("Multiplication of int and double Numbers", expectedValue, calculator.calculate(first, second, MULTIPLICATION));
+    }
+
     @Test
     public void testMultiplicationOfArrayElements(){
         Calculator calculator = new Calculator();

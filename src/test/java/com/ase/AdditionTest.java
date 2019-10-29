@@ -15,9 +15,33 @@ public class AdditionTest {
     @Test
     public void testAddPositiveNumbers(){
         Calculator calculator = new Calculator();
-        double first = 10, second = 20;
+        double first = 10.1, second = 20.2;
         Double expectedValue = (first + second);
         Assert.assertEquals("Addition Positive Numbers", expectedValue, calculator.calculate(first, second, ADDITION));
+    }
+
+    @Test
+    public void testAddFlotNumbers(){
+        Calculator calculator = new Calculator();
+        float first = 10.0f, second = 20.1f;
+        Double expectedValue = (double)(first + second);
+        Assert.assertEquals("Addition Floating Numbers", expectedValue, calculator.calculate(first, second, ADDITION));
+    }
+
+    @Test
+    public void testAddIntegerNumbers(){
+        Calculator calculator = new Calculator();
+        int first = 10, second = 20;
+        Double expectedValue = (double) (first + second);
+        Assert.assertEquals("Addition integer Numbers", expectedValue, calculator.calculate(first, second, ADDITION));
+    }
+
+    @Test
+    public void testAddDifferentTypesOfNumbers(){
+        Calculator calculator = new Calculator();
+        int first = 10; double second = 20.3;
+        Double expectedValue = (double) (first + second);
+        Assert.assertEquals("Addition int and double Numbers", expectedValue, calculator.calculate(first, second, ADDITION));
     }
 
     @Test

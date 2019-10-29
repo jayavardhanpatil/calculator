@@ -46,6 +46,31 @@ public class DivisionTest {
         Assert.assertEquals("Division of Zero by Numbers", expectedValue, result);
     }
 
+    @Test
+    public void testDividFlotNumbers(){
+        Calculator calculator = new Calculator();
+        float first = 16.5f, second = 5.5f;
+        Double expectedValue = (double) (first / second);
+        Assert.assertEquals("Division of float Numbers", expectedValue, calculator.calculate(first, second, DIVISION));
+    }
+
+    @Test
+    public void testDivideIntegerNumbers(){
+        Calculator calculator = new Calculator();
+        int first = 10, second = 20;
+        Double expectedValue = (double) (first + second);
+        Assert.assertEquals("Division of integer Numbers", expectedValue, calculator.calculate(first, second, DIVISION));
+    }
+
+    @Test
+    public void testDivisionDifferentTypesOfNumbers(){
+        Calculator calculator = new Calculator();
+        int first = 10; double second = 20.0;
+        Double expectedValue = (double) (first / second);
+        Assert.assertEquals("Division of int and double Numbers", expectedValue, calculator.calculate(first, second, DIVISION));
+    }
+
+
     //Negative Test Cases
     @Test(expected = ArithmeticException.class)
     public void testDivideNumberbyZeroisNotAllowed(){

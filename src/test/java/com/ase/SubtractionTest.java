@@ -29,6 +29,30 @@ public class SubtractionTest {
     }
 
     @Test
+    public void testSubtractionFlotNumbers(){
+        Calculator calculator = new Calculator();
+        float first = 10.0f, second = 20.1f;
+        Double expectedValue = (double)(first - second);
+        Assert.assertEquals("Subtraction Floating Numbers", expectedValue, calculator.calculate(first, second, SUBTRACTION));
+    }
+
+    @Test
+    public void testSubtractionIntegerNumbers(){
+        Calculator calculator = new Calculator();
+        int first = 10, second = 20;
+        Double expectedValue = (double) (first - second);
+        Assert.assertEquals("Subtraction integer Numbers", expectedValue, calculator.calculate(first, second, SUBTRACTION));
+    }
+
+    @Test
+    public void testSubtractionDifferentTypesOfNumbers(){
+        Calculator calculator = new Calculator();
+        int first = 10; double second = 20.3;
+        Double expectedValue = (double) (first - second);
+        Assert.assertEquals("Subtraction int and double Numbers", expectedValue, calculator.calculate(first, second, SUBTRACTION));
+    }
+
+    @Test
     public void testSubtractPositiveAndNegativeNumbers(){
         Calculator calculator = new Calculator();
         double first = -10, second = 20.0;
