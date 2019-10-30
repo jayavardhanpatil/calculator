@@ -20,4 +20,25 @@ public class TestUtilities {
         }
         return result;
     }
+
+    public Double getAdditionOfTwoNumbers(double first, double second){
+       return first + second;
+    }
+
+    public Double getMultiplicationOfTwoNumbers(double first, double second){
+        return first * second;
+    }
+
+    public Double getDivisionOfTwoNumbers(double first, double second){
+        return first / second;
+    }
+
+    public Double getSubtractionOfTwoNumbers(double first, double second){
+        return first - second;
+    }
+
+    public Double getModulusOfTwoNumbers(double first, double second){
+        return first % second;
+    }
+
 }
