@@ -14,7 +14,7 @@ pipeline {
 
          stage('Test') {
             steps {
-                sh 'mvn test'
+                sh 'mvn -Dtest=TestSuite test'
             }
             post {
                 always {
